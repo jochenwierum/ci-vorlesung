@@ -1,4 +1,4 @@
-package de.hbrs.se.learning.rpnparser;
+package de.hbrs.se.learning.service;
 
 import de.hbrs.se.learning.rpn.AddOperation;
 import de.hbrs.se.learning.rpn.DivideOperation;
