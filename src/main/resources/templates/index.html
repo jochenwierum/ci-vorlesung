@@ -7,16 +7,16 @@
 <body>
     <h1>RPN Calculator</h1>
     <div th:if="${showResult}">
-        <span th:text="${expression}">3 4 +</span>
+        <span th:text="${expression}" id="oldExpression">3 4 +</span>
         =
-        <strong th:text="${result}">7.0</strong>
+        <strong th:text="${result}" id="result">7.0</strong>
     </div>
     <div th:if="${showError}">
-        <strong th:text="${'Error: ' + errorMessage}"></strong>
+        <strong th:text="${'Error: ' + errorMessage}" id="errorMessage"></strong>
     </div>
     <form method="post" action="/calc">
-        <input type="text" name="expression" th:value="${expression}" /><br />
-        <input type="submit" value="Calculate" />
+        <input type="text" id="expression" name="expression" th:value="${expression}" /><br />
+        <input type="submit" id="submit" value="Calculate" />
     </form>
 </body>
 </html>
