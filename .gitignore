@@ -8,7 +8,6 @@ release.properties
 
 # IDEA IntelliJ
 *.iml
-.idea/
 *.ipr
 *.iws
 .idea_modules/
@@ -26,3 +25,12 @@ atlassian-ide-plugin.xml
 .loadpath
 .externalToolBuilders/
 *.launch
+
+
+#.idea/
+#!.idea/inspectionProfiles/ci.xml
+
+.idea/*
+!.idea/inspectionProfiles
+.idea/inspectionProfiles/*
+!.idea/inspectionProfiles/ci.xml
