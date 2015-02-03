@@ -21,7 +21,6 @@ public class WebdriverIT extends AbstractWebdriverIT {
 
     @Test
     public void simpleFailureTest() {
-        driver.get("http://localhost:8080/");
         driver.findElement(By.id("expression")).clear();
         driver.findElement(By.id("expression")).sendKeys("error!");
         driver.findElement(By.id("submit")).click();
