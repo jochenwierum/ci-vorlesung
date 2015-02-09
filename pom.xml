@@ -11,6 +11,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.version>1.8</java.version>
 
     <skipTests>false</skipTests>
@@ -20,10 +21,22 @@
 
   <modules>
     <module>rpn-webapp</module>
+    <module>rpn-tests</module>
   </modules>
 
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>rpn-tests</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>rpn-webapp</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
       <dependency>
         <!-- Import dependency management from Spring Boot -->
         <groupId>org.springframework.boot</groupId>
@@ -68,6 +81,12 @@
           <configuration>
             <skipTests>${skipUTs}</skipTests>
           </configuration>
+        </plugin>
+
+        <plugin>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-maven-plugin</artifactId>
+          <version>1.1.7.RELEASE</version>
         </plugin>
       </plugins>
     </pluginManagement>
