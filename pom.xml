@@ -82,6 +82,12 @@
             <skipTests>${skipUTs}</skipTests>
           </configuration>
         </plugin>
+
+        <plugin>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-maven-plugin</artifactId>
+          <version>1.1.7.RELEASE</version>
+        </plugin>
       </plugins>
     </pluginManagement>
   </build>
