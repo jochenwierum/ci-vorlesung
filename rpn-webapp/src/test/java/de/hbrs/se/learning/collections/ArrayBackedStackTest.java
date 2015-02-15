@@ -80,6 +80,6 @@ public class ArrayBackedStackTest {
         ArrayBackedStack<String> otherStack = new ArrayBackedStack<>();
         otherStack.push("Hello");
         otherStack.push("World");
-        assertThat(stack.pop(), is(equalTo("World")));
+        assertThat(otherStack.pop(), is(equalTo("World")));
     }
 }
