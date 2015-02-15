@@ -3,6 +3,7 @@ package de.hbrs.se.learning.collections;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
@@ -71,5 +72,14 @@ public class ArrayBackedStackTest {
     @Test(expected = IllegalStateException.class)
     public void popOnEmptyStackYieldsException() {
         stack.pop();
+    }
+
+
+    @Test
+    public void stackIsGeneric() {
+        ArrayBackedStack<String> otherStack = new ArrayBackedStack<>();
+        otherStack.push("Hello");
+        otherStack.push("World");
+        assertThat(stack.pop(), is(equalTo("World")));
     }
 }
