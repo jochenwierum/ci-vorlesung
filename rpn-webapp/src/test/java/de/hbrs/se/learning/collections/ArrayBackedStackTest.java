@@ -67,4 +67,9 @@ public class ArrayBackedStackTest {
         stack.pop();
         assertThat(stack.size(), is(1));
     }
+
+    @Test(expected = IllegalStateException.class)
+    public void popOnEmptyStackYieldsException() {
+        stack.pop();
+    }
 }
