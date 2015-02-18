@@ -1,4 +1,4 @@
-package de.hbrs.se.learning.it;
+package de.hbrs.se.learning.srvice;
 
 import de.hbrs.se.learning.service.RpnExecutor;
 import de.hbrs.se.learning.service.RpnParser;
