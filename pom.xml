@@ -17,7 +17,9 @@
   <modules>
     <module>rpn-webapp</module>
     <module>rpn-tests</module>
-    <module>rpn-ui-tests</module>
+    <module>rpn-webapp-ui-tests</module>
+    <module>rpn-console</module>
+    <module>rpn-lib</module>
   </modules>
 
   <dependencyManagement>
@@ -30,6 +32,21 @@
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>rpn-webapp</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>rpn-lib</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>rpn-console</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>rpn-webapp-ui-tests</artifactId>
         <version>${project.version}</version>
       </dependency>
 
@@ -100,6 +117,11 @@
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-maven-plugin</artifactId>
           <version>1.1.7.RELEASE</version>
+        </plugin>
+
+        <plugin>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <version>2.4</version>
         </plugin>
       </plugins>
     </pluginManagement>
